@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Exo+2:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cyan: #00e5ff;
+  --cyan-dim: rgba(0,229,255,0.5);
+  --cyan-ghost: rgba(0,229,255,0.08);
+  --blue: #0af;
+  --bg: #010a12;
+  --bg2: #020f1a;
+  --text: rgba(200,235,255,0.92);
+  --text-dim: rgba(120,180,220,0.5);
+  --green: #00e5a0;
+  --red: #ff4060;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+@keyframes spinCW   { to { transform: rotate(360deg);  } }
+@keyframes spinCCW  { to { transform: rotate(-360deg); } }
+@keyframes pulse    { 0%,100%{opacity:.5} 50%{opacity:1} }
+@keyframes fadeUp   { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+@keyframes scanline { 0%{top:-2%} 100%{top:102%} }
+@keyframes glow     { 0%,100%{box-shadow:0 0 8px var(--cyan-dim)} 50%{box-shadow:0 0 24px var(--cyan)} }
+@keyframes ripple   { 0%{transform:scale(1);opacity:.8} 100%{transform:scale(3);opacity:0} }
+@keyframes waveBar  { 0%,100%{height:4px} 50%{height:20px} }
+@keyframes blink    { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes slideIn  { from{opacity:0;transform:translateX(-10px)} to{opacity:1;transform:translateX(0)} }
+
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-thumb { background: rgba(0,200,255,0.2); border-radius: 2px; }
